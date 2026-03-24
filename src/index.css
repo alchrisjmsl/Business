@@ -1,0 +1,45 @@
+/* src/index.css */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0a0a0f;
+  --surface: #13131a;
+  --surface2: #1c1c27;
+  --surface3: #252533;
+  --border: #2e2e42;
+  --accent: #7c6af7;
+  --accent2: #a78bfa;
+  --accent-glow: rgba(124, 106, 247, 0.3);
+  --gold: #f0c040;
+  --gold-dim: rgba(240, 192, 64, 0.15);
+  --text: #f0eeff;
+  --text-dim: #8b8aab;
+  --text-faint: #4a4a6a;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --radius: 16px;
+  --radius-sm: 8px;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-display);
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }

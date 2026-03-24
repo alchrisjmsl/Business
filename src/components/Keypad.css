@@ -1,0 +1,76 @@
+/* src/components/Keypad.css */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border-radius: 0 0 var(--radius) var(--radius);
+  overflow: hidden;
+}
+
+.key {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  padding: 22px 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.12s ease, transform 0.08s ease, color 0.12s ease;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.key::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.key:active::after { opacity: 0.06; }
+.key:active { transform: scale(0.96); }
+
+/* Number keys */
+.key--num {
+  background: var(--surface2);
+  color: var(--text);
+}
+.key--num:hover { background: var(--surface3); }
+
+/* Function keys (AC, +/-, %) */
+.key--fn {
+  background: var(--surface3);
+  color: var(--accent2);
+}
+.key--fn:hover { background: #2e2e40; }
+
+/* Operator keys */
+.key--op {
+  background: #2a2040;
+  color: var(--accent2);
+  font-size: 22px;
+}
+.key--op:hover { background: #332850; }
+
+/* Equals key */
+.key--eq {
+  background: var(--accent);
+  color: #fff;
+  font-size: 22px;
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+.key--eq:hover {
+  background: var(--accent2);
+  box-shadow: 0 0 30px var(--accent-glow);
+}
+
+/* Wide key (0) */
+.key--wide {
+  grid-column: span 2;
+  text-align: left;
+  padding-left: 28px;
+}

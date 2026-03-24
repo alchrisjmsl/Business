@@ -1,0 +1,51 @@
+/* src/components/Calculator.css */
+.calculator-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.calculator {
+  width: 340px;
+  max-width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(124,106,247,0.08),
+    0 20px 60px rgba(0,0,0,0.5),
+    0 0 80px rgba(124,106,247,0.04);
+  animation: calcIn 0.4s ease;
+}
+
+@keyframes calcIn {
+  from { transform: translateY(16px) scale(0.97); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.unlock-hint {
+  background: var(--surface2);
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 13px;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  animation: hintIn 0.3s ease;
+}
+
+@keyframes hintIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.unlock-hint:hover {
+  background: var(--surface3);
+  color: var(--text);
+}
+
+.unlock-hint strong {
+  color: var(--accent2);
+}

@@ -1,0 +1,59 @@
+/* src/components/Display.css */
+.display {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 20px 24px 16px;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.display::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0.6;
+}
+
+.display__expression {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-dim);
+  letter-spacing: 0.02em;
+  min-height: 18px;
+  word-break: break-all;
+  text-align: right;
+}
+
+.display__input {
+  font-family: var(--font-mono);
+  font-size: clamp(28px, 6vw, 42px);
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  word-break: break-all;
+  text-align: right;
+  transition: filter 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.display__input.blurred {
+  filter: blur(8px);
+  user-select: none;
+  color: var(--accent2);
+}
+
+.display__lock {
+  font-size: 20px;
+  filter: blur(0) !important;
+}

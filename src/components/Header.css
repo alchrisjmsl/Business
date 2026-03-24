@@ -1,0 +1,70 @@
+/* src/components/Header.css */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.header__logo {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__logo-icon {
+  color: var(--accent);
+  font-size: 20px;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__upgrade {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 7px 16px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  box-shadow: 0 2px 12px var(--accent-glow);
+}
+.header__upgrade:hover { background: var(--accent2); transform: translateY(-1px); }
+
+.header__pro-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  background: linear-gradient(135deg, #f0c040, #e8a020);
+  color: #1a1005;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.header__logout {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--surface3);
+  border: 1.5px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.header__logout:hover { border-color: var(--accent); }
